@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>shine-links</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: #0c0c0c;
+                color: #d4d4d4;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    sans-serif;
+                font-size: 16px;
+                line-height: 1.7;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 5rem 1.5rem;
+            }
+            .page {
+                width: 100%;
+                max-width: 560px;
+            }
+            .hero {
+                margin-bottom: 5rem;
+            }
+            .hero h1 {
+                font-size: clamp(2.4rem, 6vw, 3.6rem);
+                font-weight: 600;
+                letter-spacing: -0.03em;
+                color: #f0f0f0;
+                margin-bottom: 0.75rem;
+            }
+            .hero p {
+                color: #666;
+            }
+            .install {
+                background: #161616;
+                border: 1px solid #222;
+                border-radius: 10px;
+                padding: 1rem 1.25rem;
+                font-family: monospace;
+                font-size: 0.9rem;
+                color: #888;
+                margin-bottom: 5rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+            .install span {
+                color: #f0f0f0;
+                flex: 1;
+            }
+            .copy-btn {
+                background: none;
+                border: 1px solid #2a2a2a;
+                color: #555;
+                padding: 4px 10px;
+                border-radius: 6px;
+                font-size: 0.75rem;
+                cursor: pointer;
+                font-family: system-ui, sans-serif;
+                transition:
+                    color 0.15s,
+                    border-color 0.15s;
+            }
+            .copy-btn:hover {
+                color: #ccc;
+                border-color: #444;
+            }
+            section {
+                margin-bottom: 4rem;
+            }
+            .label {
+                font-size: 0.72rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #444;
+                margin-bottom: 1.25rem;
+            }
+            a {
+                color: #d4d4d4;
+                text-decoration: none;
+                border-bottom: 1px solid #333;
+                padding-bottom: 1px;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem 2.5rem;
+                align-items: baseline;
+            }
+            .big-link {
+                font-size: 2rem;
+                font-weight: 600;
+                color: #f0f0f0;
+                border: none;
+                letter-spacing: -0.02em;
+            }
+            .colored-link {
+                border: none;
+                font-size: 1rem;
+            }
+            .purple {
+                color: #a78bfa;
+            }
+            .gold {
+                color: #fbbf24;
+            }
+            .green {
+                color: #34d399;
+            }
+            .nav-demo {
+                display: flex;
+                gap: 2rem;
+                padding: 1rem 0;
+                border-top: 1px solid #1c1c1c;
+                border-bottom: 1px solid #1c1c1c;
+            }
+            .nav-demo a {
+                font-size: 0.9rem;
+                color: #aaa;
+                border: none;
+            }
+            .prose {
+                color: #888;
+            }
+            .prose a {
+                color: #bbb;
+            }
+            footer {
+                margin-top: 6rem;
+                color: #333;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+            footer a {
+                color: #444;
+                border-bottom-color: #2a2a2a;
+                font-size: 0.8rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <div class="hero">
+                <h1>shine-links ✦</h1>
+                <p>
+                    Cartoon shine sweep for links. One script tag, zero config.
+                </p>
+            </div>
+
+            <div class="install">
+                <span>&lt;script src="shine.js"&gt;&lt;/script&gt;</span>
+                <button class="copy-btn" onclick="copyInstall()">copy</button>
+            </div>
+
+            <section>
+                <p class="label">Default — loops</p>
+                <div class="row">
+                    <a href="#">Documentation</a>
+                    <a href="#">Changelog</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">npm</a>
+                </div>
+            </section>
+
+            <section>
+                <p class="label">Big text</p>
+                <div class="row">
+                    <a href="#" class="big-link">Get started</a>
+                    <a href="#" class="big-link">Learn more</a>
+                </div>
+            </section>
+
+            <section>
+                <p class="label">Colored</p>
+                <div class="row">
+                    <a
+                        href="#"
+                        class="colored-link purple"
+                        data-shine-color="rgba(167,139,250,0.9)"
+                        >Purple</a
+                    >
+                    <a
+                        href="#"
+                        class="colored-link gold"
+                        data-shine-color="rgba(251,191,36,0.95)"
+                        >Gold</a
+                    >
+                    <a
+                        href="#"
+                        class="colored-link green"
+                        data-shine-color="rgba(52,211,153,0.9)"
+                        >Green</a
+                    >
+                </div>
+            </section>
+
+            <section>
+                <p class="label">Nav links</p>
+                <div class="nav-demo">
+                    <a href="#">Home</a>
+                    <a href="#">Docs</a>
+                    <a href="#">Examples</a>
+                    <a href="#">Blog</a>
+                </div>
+            </section>
+
+            <section>
+                <p class="label">In a paragraph</p>
+                <p class="prose">
+                    A tiny script that adds a
+                    <a href="#">cartoon shine effect</a> to your links. No
+                    dependencies, no build step — just drop in
+                    <a href="#">shine.js</a> and add the
+                    <code
+                        style="
+                            font-family: monospace;
+                            font-size: 0.88em;
+                            background: #1a1a1a;
+                            padding: 2px 6px;
+                            border-radius: 4px;
+                            color: #aaa;
+                        "
+                        >shine</code
+                    >
+                    class. Works with <a href="#">any element</a>.
+                </p>
+            </section>
+
+            <footer>Made by you · MIT License</footer>
+        </div>
+
+        <script src="shine.js"></script>
+        <script>
+            document
+                .querySelectorAll("a")
+                .forEach((el) => el.classList.add("shine"));
+            function copyInstall() {
+                navigator.clipboard.writeText(
+                    '<script src="shine.js"><\/script>',
+                );
+                const btn = document.querySelector(".copy-btn");
+                btn.textContent = "copied";
+                setTimeout(() => (btn.textContent = "copy"), 1500);
+            }
+        </script>
+    </body>
+</html>

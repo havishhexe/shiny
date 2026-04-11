@@ -1,0 +1,39 @@
+# shine-links ✦
+
+Cartoon shine sweep for links. Drop in one script tag, done.
+
+## Via CDN (no install)
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/shine-links/shine.js"></script>
+```
+
+## Via npm
+
+```bash
+npm install shine-links
+```
+
+```js
+import "shine-links";
+```
+
+## Usage
+
+Just add the class `shine` to any element:
+
+```html
+<a class="shine" href="#">Documentation</a>
+```
+
+Or apply to all links at once in JS:
+
+```js
+document.querySelectorAll("a").forEach(el => el.classList.add("shine"));
+```
+
+That's it.
+
+## License
+
+MIT

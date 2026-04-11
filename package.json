@@ -1,0 +1,11 @@
+{
+  "name": "shine-links",
+  "version": "1.0.0",
+  "description": "Cartoon shine sweep effect for links",
+  "main": "shine.js",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["shine", "links", "animation", "css", "effect"],
+  "license": "MIT"
+}
