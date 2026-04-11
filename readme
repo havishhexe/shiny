@@ -1,38 +1,71 @@
 # shine-links ✦
 
-Cartoon shine sweep for links. Drop in one script tag, done.
+Cartoon shine sweep for links. One script tag, zero config.
 
-## Via CDN (no install)
+## What is it?
 
+A ~20 line vanilla JS script that adds a left-to-right cartoon shine animation to links or any element. No dependencies, no build step.
+
+## Installation
+
+**CDN — recommended, no install:**
 ```html
 <script src="https://cdn.jsdelivr.net/npm/shine-links/shine.js"></script>
 ```
 
-## Via npm
+**Local file:**
 
+Download `shine.js`, put it next to your HTML, then:
+```html
+<script src="shine.js"></script>
+```
+
+**npm:**
 ```bash
 npm install shine-links
 ```
-
 ```js
 import "shine-links";
 ```
 
 ## Usage
 
-Just add the class `shine` to any element:
-
+Add the `shine` class to any element:
 ```html
 <a class="shine" href="#">Documentation</a>
 ```
 
-Or apply to all links at once in JS:
-
+Or apply to all links at once:
 ```js
 document.querySelectorAll("a").forEach(el => el.classList.add("shine"));
 ```
 
-That's it.
+## Full example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    a { color: #d4d4d4; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a href="#">My link</a>
+
+  <script src="shine.js"></script>
+  <script>
+    document.querySelectorAll("a").forEach(el => el.classList.add("shine"));
+  </script>
+</body>
+</html>
+```
+
+## Links
+
+- GitHub: https://github.com/havishhexe/shiny
+- npm: https://www.npmjs.com/package/shine-links
+- CDN: https://cdn.jsdelivr.net/npm/shine-links/shine.js
 
 ## License
 
