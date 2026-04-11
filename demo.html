@@ -41,8 +41,27 @@
             }
             .hero p {
                 font-size: 0.95rem;
-                color: #aaa;
-                margin-bottom: 1.2rem;
+                color: #888;
+                margin-bottom: 1.4rem;
+                line-height: 1.7;
+                max-width: 380px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .gradient-link {
+                font-weight: 700;
+                font-size: 0.95rem;
+                text-decoration: none;
+                background: linear-gradient(
+                    90deg,
+                    #f43f5e,
+                    #a855f7,
+                    #3b82f6,
+                    #10b981
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
 
             hr {
@@ -59,8 +78,8 @@
                 font-weight: 700;
                 letter-spacing: 0.12em;
                 text-transform: uppercase;
-                color: #ccc;
-                margin-bottom: 1.2rem;
+                color: #bbb;
+                margin-bottom: 1.4rem;
             }
 
             .steps {
@@ -80,27 +99,35 @@
                 padding-top: 3px;
             }
             .step-body h3 {
-                font-size: 0.88rem;
+                font-size: 0.92rem;
                 font-weight: 700;
                 color: #0a0a0a;
-                margin-bottom: 0.35rem;
+                margin-bottom: 0.4rem;
             }
             .step-body p {
-                font-size: 0.82rem;
-                color: #aaa;
-                line-height: 1.6;
-                margin-bottom: 0.5rem;
+                font-size: 0.85rem;
+                color: #666;
+                line-height: 1.65;
+                margin-bottom: 0.6rem;
             }
             pre {
-                background: #f7f7f7;
-                border: 1px solid #ececec;
+                background: #f4f4f4;
+                border: 1px solid #e8e8e8;
                 border-radius: 7px;
-                padding: 0.7rem 0.9rem;
+                padding: 0.75rem 1rem;
                 font-family: monospace;
-                font-size: 0.78rem;
-                color: #555;
+                font-size: 0.8rem;
+                color: #333;
                 line-height: 1.65;
                 overflow-x: auto;
+            }
+            code {
+                font-family: monospace;
+                font-size: 0.82em;
+                background: #f0f0f0;
+                padding: 1px 5px;
+                border-radius: 3px;
+                color: #333;
             }
             .divider-small {
                 width: 1px;
@@ -120,154 +147,228 @@
                 gap: 0.6rem;
             }
             .demo-label {
-                font-size: 0.82rem;
-                color: #aaa;
-                min-width: 70px;
+                font-size: 0.85rem;
+                color: #999;
+                min-width: 80px;
+            }
+            .demo-link {
+                font-weight: 700;
+                font-size: 0.95rem;
+                color: #0a0a0a;
+                text-decoration: none;
+            }
+            .demo-link.gold {
+                color: #b8860b;
+            }
+
+            .install-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .install-card {
+                border: 1px solid #e8e8e8;
+                border-radius: 10px;
+                padding: 1.1rem 1.2rem;
+            }
+            .install-card.featured {
+                border: 2px solid #0a0a0a;
+                background: #fafafa;
+            }
+            .install-card .card-top {
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                margin-bottom: 0.4rem;
+            }
+            .install-card h3 {
+                font-size: 0.92rem;
+                font-weight: 700;
+                color: #0a0a0a;
+            }
+            .install-card .badge {
+                font-size: 0.65rem;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                background: #0a0a0a;
+                color: #fff;
+                padding: 2px 7px;
+                border-radius: 4px;
+            }
+            .install-card p {
+                font-size: 0.83rem;
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 0.7rem;
+            }
+            .install-card pre {
+                margin: 0;
             }
 
             .ways {
                 display: flex;
                 flex-direction: column;
-                gap: 1.4rem;
+                gap: 1.6rem;
             }
             .way-title {
-                font-size: 0.82rem;
+                font-size: 0.92rem;
                 font-weight: 700;
                 color: #0a0a0a;
-                margin-bottom: 0.3rem;
+                margin-bottom: 0.35rem;
             }
             .way-desc {
-                font-size: 0.8rem;
-                color: #aaa;
-                line-height: 1.6;
-                margin-bottom: 0.5rem;
+                font-size: 0.85rem;
+                color: #666;
+                line-height: 1.65;
+                margin-bottom: 0.55rem;
             }
 
             .note {
                 background: #fafafa;
-                border: 1px solid #ececec;
+                border: 1px solid #e8e8e8;
                 border-left: 3px solid #0a0a0a;
-                border-radius: 0 7px 7px 0;
-                padding: 0.9rem 1rem;
-                font-size: 0.8rem;
-                color: #888;
-                line-height: 1.65;
+                border-radius: 0 8px 8px 0;
+                padding: 1rem 1.1rem;
+                font-size: 0.85rem;
+                color: #666;
+                line-height: 1.75;
             }
             .note strong {
                 color: #0a0a0a;
             }
 
-            /* ── shine ── */
-            .shine {
-                position: relative;
-                display: inline-block;
+            .ai-box {
+                background: #f7f7f7;
+                border: 1px solid #e8e8e8;
+                border-radius: 10px;
+                padding: 1rem 1.2rem;
+                margin-top: 1rem;
             }
-            /* the actual clipping wrapper lives as a pseudo on a child span */
-            .shine .s {
-                position: relative;
-                display: inline-block;
-                overflow: hidden;
+            .ai-box-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 0.75rem;
             }
-            .shine .s::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: -100%;
-                width: 40%;
-                height: 100%;
-                background: linear-gradient(
-                    105deg,
-                    transparent 25%,
-                    rgba(255, 255, 255, 0.92) 50%,
-                    transparent 75%
-                );
-                transform: skewX(-15deg);
-                animation: shine-sweep 2.2s ease-in-out infinite;
-                mix-blend-mode: screen;
-                pointer-events: none;
+            .ai-box-top span {
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #bbb;
             }
-            .shine.gold .s::after {
-                background: linear-gradient(
-                    105deg,
-                    transparent 25%,
-                    rgba(255, 210, 0, 0.7) 50%,
-                    transparent 75%
-                );
-                mix-blend-mode: overlay;
+            .copy-btn {
+                font-size: 0.75rem;
+                font-weight: 600;
+                background: #0a0a0a;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 4px 10px;
+                cursor: pointer;
+                font-family: inherit;
+                transition: background 0.15s;
             }
-            @keyframes shine-sweep {
-                0% {
-                    left: -100%;
-                }
-                55% {
-                    left: 150%;
-                }
-                100% {
-                    left: 150%;
-                }
+            .copy-btn:hover {
+                background: #333;
+            }
+            .copy-btn.copied {
+                background: #16a34a;
+            }
+            .ai-prompt {
+                font-family: monospace;
+                font-size: 0.78rem;
+                color: #555;
+                line-height: 1.7;
+                white-space: pre-wrap;
+                word-break: break-word;
             }
 
-            a.shine,
-            a {
+            .nav-bar {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                justify-content: center;
+                margin-top: 1.6rem;
+            }
+            .nav-bar a {
+                font-size: 0.75rem;
+                font-weight: 600;
+                color: #888;
                 text-decoration: none;
+                border: 1px solid #e8e8e8;
+                border-radius: 999px;
+                padding: 4px 12px;
+                transition:
+                    color 0.15s,
+                    border-color 0.15s;
+                overflow: visible;
             }
-            a {
+            .nav-bar a:hover {
                 color: #0a0a0a;
-            }
-            a.gold {
-                color: #b8860b;
+                border-color: #0a0a0a;
             }
         </style>
+        <script>
+            function copyPrompt(btn) {
+                const el = document.getElementById("ai-prompt");
+                const ta = document.createElement("textarea");
+                ta.value = el.innerText;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand("copy");
+                document.body.removeChild(ta);
+                btn.textContent = "Copied!";
+                btn.classList.add("copied");
+                setTimeout(() => {
+                    btn.textContent = "Copy";
+                    btn.classList.remove("copied");
+                }, 2000);
+            }
+        </script>
     </head>
     <body>
         <div class="page">
             <div class="hero">
-                <h1 class="shine"><span class="s">shiny</span></h1>
-                <p>cartoon shine for your links — 20 lines of js</p>
+                <h1 id="hero-title">shiny</h1>
+                <p>
+                    I built this simple shine effect so anyone can drop it into
+                    their project without any hassle. No libraries, no
+                    configuration — just a script tag and one line of JS.
+                </p>
                 <a
-                    class="shine"
+                    class="gradient-link"
                     href="https://github.com/havishhexe/shiny"
-                    style="font-weight: 700; font-size: 0.95rem"
-                    ><span class="s">github.com/havishhexe/shiny</span></a
+                    >github.com/havishhexe/shiny</a
                 >
+                <div class="nav-bar">
+                    <a href="#demo">Demo</a>
+                    <a href="#how-to-use">How to use</a>
+                    <a href="#install">Install</a>
+                    <a href="#ways">Ways to use</a>
+                    <a href="#ai">AI prompt</a>
+                    <a href="#color">Shine color</a>
+                </div>
             </div>
 
             <hr />
 
             <div class="section">
-                <p class="section-label">Live demo</p>
+                <p class="section-label" id="demo">Live demo</p>
                 <div class="demo-links">
                     <div class="demo-row">
                         <span class="demo-label">github</span>
                         <a
-                            class="shine"
+                            class="demo-link"
                             href="https://github.com/havishhexe/shiny"
-                            style="font-weight: 700; font-size: 0.95rem"
-                            ><span class="s"
-                                >github.com/havishhexe/shiny</span
-                            ></a
+                            >github.com/havishhexe/shiny</a
                         >
                     </div>
                     <div class="demo-row">
                         <span class="demo-label">x / twitter</span>
-                        <a
-                            class="shine"
-                            href="https://x.com"
-                            style="font-weight: 700; font-size: 0.95rem"
-                            ><span class="s">x.com/yourhandle</span></a
-                        >
-                    </div>
-                    <div class="demo-row">
-                        <span class="demo-label">gold shine</span>
-                        <a
-                            class="shine gold"
-                            href="#"
-                            style="
-                                font-weight: 700;
-                                font-size: 0.95rem;
-                                color: #b8860b;
-                            "
-                            ><span class="s">looks like this</span></a
+                        <a class="demo-link gold" href="https://x.com"
+                            >x.com/yourhandle</a
                         >
                     </div>
                 </div>
@@ -276,7 +377,7 @@
             <hr />
 
             <div class="section">
-                <p class="section-label">How to use</p>
+                <p class="section-label" id="how-to-use">How to use</p>
                 <div class="steps">
                     <div class="step">
                         <span class="num">01</span>
@@ -284,30 +385,21 @@
                             <h3>Add the script</h3>
                             <p>
                                 Drop this before your closing
-                                <code
-                                    style="
-                                        font-family: monospace;
-                                        font-size: 0.8em;
-                                        color: #aaa;
-                                    "
-                                    >&lt;/body&gt;</code
-                                >
-                                tag.
+                                <code>&lt;/body&gt;</code> tag.
                             </p>
                             <pre>
-&lt;script src="https://cdn.jsdelivr.net/npm/shine-links/shine.js"&gt;&lt;/script&gt;</pre
+&lt;script src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"&gt;&lt;/script&gt;</pre
                             >
                         </div>
                     </div>
-
                     <div class="divider-small"></div>
-
                     <div class="step">
                         <span class="num">02</span>
                         <div class="step-body">
                             <h3>Apply the effect</h3>
                             <p>
-                                Add one line of JS to shine all links at once.
+                                Add one line of JS to apply shine to all links
+                                at once.
                             </p>
                             <pre>
 document.querySelectorAll("a")
@@ -315,18 +407,17 @@ document.querySelectorAll("a")
                             >
                         </div>
                     </div>
-
                     <div class="divider-small"></div>
-
                     <div class="step">
                         <span class="num">03</span>
                         <div class="step-body">
-                            <h3>Or target a specific element</h3>
-                            <p>Just add the class directly in your HTML.</p>
+                            <h3>Or just add the class</h3>
+                            <p>
+                                Add <code>shine</code> directly to any element
+                                in HTML.
+                            </p>
                             <pre>
-&lt;a class="shine" href="#"&gt;
-  &lt;span class="s"&gt;My link&lt;/span&gt;
-&lt;/a&gt;</pre
+&lt;a class="shine" href="#"&gt;My link&lt;/a&gt;</pre
                             >
                         </div>
                     </div>
@@ -336,12 +427,93 @@ document.querySelectorAll("a")
             <hr />
 
             <div class="section">
-                <p class="section-label">Ways to use it</p>
+                <p class="section-label" id="install">Ways to install</p>
+                <div class="install-cards">
+                    <div class="install-card featured">
+                        <div class="card-top">
+                            <h3>CDN</h3>
+                            <span class="badge">recommended</span>
+                        </div>
+                        <p>
+                            Drop the script tag into any HTML file. No install,
+                            no setup — works immediately.
+                        </p>
+                        <pre>
+&lt;script src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"&gt;&lt;/script&gt;</pre
+                        >
+                    </div>
+                    <div class="install-card">
+                        <div class="card-top"><h3>npm</h3></div>
+                        <p>
+                            If you're using React, Vite, or any JS framework,
+                            install it as a package.
+                        </p>
+                        <pre>npm install shine-links</pre>
+                        <pre style="margin-top: 0.5rem">
+import "shine-links";</pre
+                        >
+                    </div>
+                    <div class="install-card">
+                        <div class="card-top">
+                            <h3>Download from GitHub</h3>
+                        </div>
+                        <p>
+                            Grab <code>shine.js</code> directly from the repo
+                            and host it yourself.
+                        </p>
+                        <pre>github.com/havishhexe/shiny</pre>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="section">
+                <p class="section-label" id="ai">Using with AI</p>
+                <p
+                    style="
+                        font-size: 0.85rem;
+                        color: #666;
+                        line-height: 1.65;
+                        margin-bottom: 1rem;
+                    "
+                >
+                    Asking ChatGPT or Claude to add this? Paste this prompt
+                    first so it knows exactly how it works.
+                </p>
+                <div class="ai-box">
+                    <div class="ai-box-top">
+                        <span>Prompt for AI</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="ai-prompt" id="ai-prompt">
+                        Add shine-links to this project. Rules: 1. Script tag
+                        goes before &lt;/body&gt;, not in &lt;head&gt;:
+                        &lt;script
+                        src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"&gt;&lt;/script&gt;
+                        2. Don't call any function — it runs automatically. 3.
+                        Don't override .shine in CSS — style links with a {}
+                        only. 4. Streak color should match the text color. Find
+                        this line in shine.js and change the RGB to match:
+                        rgba(255,255,255,0.55) — keep opacity around 0.5, just
+                        change the RGB. Examples: White text → rgba(255, 255,
+                        255, 0.5) Black text → rgba(0, 0, 0, 0.12) Gold text →
+                        rgba(255, 200, 0, 0.5) Red text → rgba(255, 0, 0, 0.5)
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <div class="section">
+                <p class="section-label" id="ways">Ways to use it</p>
                 <div class="ways">
                     <div>
                         <p class="way-title">All links on the page</p>
                         <p class="way-desc">
-                            Apply shine to every single link automatically.
+                            Apply shine to every single link automatically with
+                            one line.
                         </p>
                         <pre>
 document.querySelectorAll("a")
@@ -361,23 +533,21 @@ document.querySelectorAll("nav a")
                     <div>
                         <p class="way-title">A single element</p>
                         <p class="way-desc">
-                            Add the class directly in HTML — no JS needed.
+                            Add the class directly in HTML — no JS needed at
+                            all.
                         </p>
                         <pre>
-&lt;a class="shine" href="/about"&gt;
-  &lt;span class="s"&gt;About&lt;/span&gt;
-&lt;/a&gt;</pre
+&lt;a class="shine" href="/about"&gt;About&lt;/a&gt;</pre
                         >
                     </div>
                     <div>
                         <p class="way-title">Any element, not just links</p>
                         <p class="way-desc">
-                            Works on headings, buttons, spans — anything.
+                            Works on headings, buttons, spans — anything you
+                            want to shine.
                         </p>
                         <pre>
-&lt;h1 class="shine"&gt;
-  &lt;span class="s"&gt;Hello world&lt;/span&gt;
-&lt;/h1&gt;</pre
+&lt;h1 class="shine"&gt;Hello world&lt;/h1&gt;</pre
                         >
                     </div>
                 </div>
@@ -386,29 +556,25 @@ document.querySelectorAll("nav a")
             <hr />
 
             <div class="section">
-                <p class="section-label">Note on shine color</p>
+                <p class="section-label" id="color">Note on shine color</p>
                 <div class="note">
                     <strong>Match your shine color to your background.</strong
                     ><br /><br />
-                    On a <strong>dark background</strong> — use a white streak
-                    with
-                    <code style="font-family: monospace; font-size: 0.85em"
-                        >mix-blend-mode: overlay</code
+                    On a <strong>dark background</strong> — increase the white
+                    opacity in the gradient, e.g.
+                    <code>rgba(255,255,255,0.9)</code><br /><br />
+                    On a <strong>light background</strong> — keep opacity lower
+                    so it's subtle, e.g. <code>rgba(255,255,255,0.5)</code
                     ><br /><br />
-                    On a <strong>light background</strong> — use a white streak
-                    with
-                    <code style="font-family: monospace; font-size: 0.85em"
-                        >mix-blend-mode: screen</code
-                    >
-                    so it's invisible on the bg but lights up the text.<br /><br />
                     For <strong>colored text</strong> like gold — use a matching
-                    color streak with
-                    <code style="font-family: monospace; font-size: 0.85em"
-                        >mix-blend-mode: overlay</code
-                    >
-                    to keep it natural.
+                    color in the gradient to keep it natural.
                 </div>
             </div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"></script>
+        <script>
+            document.getElementById("hero-title").classList.add("shine");
+        </script>
     </body>
 </html>

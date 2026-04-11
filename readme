@@ -1,23 +1,102 @@
 # shine-links ✦
 
-Cartoon shine sweep for links. One script tag, zero config.
+A shine sweep animation for links. One script tag, nothing else.
 
-## What is it?
+---
 
-A ~20 line vanilla JS script that adds a left-to-right cartoon shine animation to links or any element. No dependencies, no build step.
+## How it works
 
-## Installation
+When you load `shine.js` it:
+1. Injects the `.shine` CSS into your page automatically
+2. Finds every `<a>` tag and adds the `shine` class to it
+3. The animation runs — no setup needed
 
-**CDN — recommended, no install:**
+---
+
+## Usage
+
 ```html
-<script src="https://cdn.jsdelivr.net/npm/shine-links/shine.js"></script>
+<body>
+
+  <a href="/docs">Documentation</a>
+  <a href="/blog">Blog</a>
+
+  <!-- load before </body>, not in <head> -->
+  <script src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"></script>
+
+</body>
 ```
 
-**Local file:**
+That's all. No JS to call, no class to add manually.
 
-Download `shine.js`, put it next to your HTML, then:
+---
+
+## Common mistakes
+
+**❌ Don't load it in `<head>`**
 ```html
-<script src="shine.js"></script>
+<!-- wrong — element doesn't exist yet when script runs -->
+<head>
+  <script src="shine.js"></script>
+</head>
+```
+
+```html
+<!-- correct — always before </body> -->
+<body>
+  ...
+  <script src="shine.js"></script>
+</body>
+```
+
+**❌ Don't call `new ShineLinks()` or any function**
+```js
+// wrong — this API doesn't exist
+new ShineLinks('.shine');
+ShineLinks.init();
+```
+The script runs automatically. You don't call anything.
+
+**❌ Don't override `.shine` CSS with `position: static` or remove `overflow: hidden`**
+```css
+/* wrong — breaks the clipping, causes a visible box */
+.shine {
+  position: static;
+  overflow: visible;
+}
+```
+If you need to style the link, target it before the shine class:
+```css
+/* correct */
+a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+```
+
+---
+
+## Apply to specific elements only
+
+By default it applies to all `<a>` tags. To apply manually to a single element:
+
+```html
+<h1 class="shine">Hello</h1>
+```
+
+Or via JS:
+```js
+document.querySelector(".my-link").classList.add("shine");
+```
+
+---
+
+## Install options
+
+**CDN — recommended:**
+```html
+<script src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"></script>
 ```
 
 **npm:**
@@ -28,45 +107,23 @@ npm install shine-links
 import "shine-links";
 ```
 
-## Usage
+**Direct download:**
+Grab `shine.js` from [github.com/havishhexe/shiny](https://github.com/havishhexe/shiny) and host it yourself.
 
-Add the `shine` class to any element:
-```html
-<a class="shine" href="#">Documentation</a>
-```
+---
 
-Or apply to all links at once:
+## Dark vs light backgrounds
+
+The default streak is white at `0.55` opacity which works on both dark and light backgrounds. If you want to tweak it, copy `shine.js` locally and adjust this line:
+
 ```js
-document.querySelectorAll("a").forEach(el => el.classList.add("shine"));
+background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%);
 ```
 
-## Full example
+Increase opacity for dark backgrounds, decrease for light.
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    a { color: #d4d4d4; text-decoration: none; }
-  </style>
-</head>
-<body>
-  <a href="#">My link</a>
-
-  <script src="shine.js"></script>
-  <script>
-    document.querySelectorAll("a").forEach(el => el.classList.add("shine"));
-  </script>
-</body>
-</html>
-```
-
-## Links
-
-- GitHub: https://github.com/havishhexe/shiny
-- npm: https://www.npmjs.com/package/shine-links
-- CDN: https://cdn.jsdelivr.net/npm/shine-links/shine.js
+---
 
 ## License
 
-MIT
+MIT · [github.com/havishhexe/shiny](https://github.com/havishhexe/shiny)
