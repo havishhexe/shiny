@@ -204,7 +204,7 @@
 
   <div class="hero">
     <h1 id="hero-title">shiny</h1>
-    <p>I built this simple shine effect so anyone can drop it into their project without any hassle. No libraries, no configuration — just a script tag and one line of JS.</p>
+    <p>A simple shine effect so anyone can drop it into their project without any hassle. No libraries, no configuration. Just a script tag and one line of JS.</p>
     <a class="gradient-link" href="https://github.com/havishhexe/shiny">github.com/havishhexe/shiny</a>
     <div class="nav-bar">
       <a href="#demo">Demo</a>
@@ -227,7 +227,7 @@
       </div>
       <div class="demo-row">
         <span class="demo-label">x / twitter</span>
-        <a class="demo-link gold" href="https://x.com/blurrryytwt">x.com/blurryy</a>
+        <a class="demo-link gold" href="https://x.com/blurrryytwt">x.com/blurrryytwt</a>
       </div>
     </div>
   </div>
@@ -367,11 +367,23 @@ Rules:
     </div>
   </div>
 
+  <hr>
+
+  <div class="section">
+    <p class="section-label">Made by</p>
+    <div class="install-card featured">
+      <h3 id="bio-name" style="font-size:1.1rem;margin-bottom:0.5rem;">Havish</h3>
+      <p style="margin-bottom:1rem;">I like building things, whether that's code, art, design, or anything creative. If you're into that too, let's connect.</p>
+      <a href="https://x.com/blurrryytwt" style="font-weight:700;font-size:0.9rem;color:#0a0a0a;text-decoration:none;">x.com/blurrryytwt</a>
+    </div>
+  </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"></script>
 <script>
   document.getElementById("hero-title").classList.add("shine");
+  const bio = document.getElementById("bio-name"); if (bio) bio.classList.add("shine");
 </script>
 </body>
 </html>
