@@ -213,6 +213,7 @@
       <a href="#ways">Ways to use</a>
       <a href="#ai">AI prompt</a>
       <a href="#color">Shine color</a>
+      <a href="#customize">Customize</a>
     </div>
   </div>
 
@@ -315,14 +316,20 @@ Rules:
 
 3. Don't override .shine in CSS — style links with a {} only.
 
-4. Streak color should match the text color. Find this line in shine.js and change the RGB to match:
-   rgba(255,255,255,0.55) — keep opacity around 0.5, just change the RGB.
+4. To customize, override .shine::after in your own CSS:
+   .shine::after {
+     animation-duration: 2.2s;  /* speed */
+     animation-delay: 0s;       /* delay */
+     width: 50%;                /* streak width */
+     transform: skewX(-15deg);  /* tilt */
+     background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%);
+   }
 
-   Examples:
-   White text  → rgba(255, 255, 255, 0.5)
-   Black text  → rgba(0, 0, 0, 0.12)
-   Gold text   → rgba(255, 200, 0, 0.5)
-   Red text    → rgba(255, 0, 0, 0.5)</div>
+5. Streak color should match your text color. Change the rgba value:
+   White text → rgba(255, 255, 255, 0.5)
+   Black text → rgba(0, 0, 0, 0.12)
+   Gold text  → rgba(255, 200, 0, 0.5)
+   Red text   → rgba(255, 0, 0, 0.5)</div>
     </div>
   </div>
   <hr>
@@ -364,6 +371,58 @@ Rules:
       On a <strong>dark background</strong> — increase the white opacity in the gradient, e.g. <code>rgba(255,255,255,0.9)</code><br><br>
       On a <strong>light background</strong> — keep opacity lower so it's subtle, e.g. <code>rgba(255,255,255,0.5)</code><br><br>
       For <strong>colored text</strong> like gold — use a matching color in the gradient to keep it natural.
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="section">
+    <p class="section-label" id="customize">Customization</p>
+    <p style="font-size:0.85rem;color:#666;line-height:1.65;margin-bottom:1.2rem;">If you're using the CDN you can't edit shine.js directly — override these in your own CSS instead.</p>
+    <pre style="margin-bottom:1rem;">.shine::after {
+  animation-duration: 2.2s;   /* speed — lower = faster */
+  animation-delay: 0s;        /* delay before first sweep */
+  width: 50%;                 /* streak width — lower = sharper */
+  transform: skewX(-15deg);   /* tilt — 0 = straight */
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255,255,255,0.55) 50%, /* change color + opacity here */
+    transparent 70%
+  );
+}</pre>
+    <div class="ways">
+      <div>
+        <p class="way-title">Speed</p>
+        <p class="way-desc">Lower = faster sweep. Default is 2.2s.</p>
+        <pre>.shine::after { animation-duration: 1s; }</pre>
+      </div>
+      <div>
+        <p class="way-title">Color</p>
+        <p class="way-desc">Match the streak color to your text. Keep opacity around 0.5.</p>
+        <pre>.shine::after {
+  background: linear-gradient(105deg,
+    transparent 30%,
+    rgba(255,200,0,0.5) 50%, /* gold */
+    transparent 70%
+  );
+}</pre>
+      </div>
+      <div>
+        <p class="way-title">Streak width</p>
+        <p class="way-desc">Lower = thinner, sharper streak. Default is 50%.</p>
+        <pre>.shine::after { width: 25%; }</pre>
+      </div>
+      <div>
+        <p class="way-title">Tilt</p>
+        <p class="way-desc">Controls the angle of the streak. 0 = straight, -15 = angled.</p>
+        <pre>.shine::after { transform: skewX(-5deg); }</pre>
+      </div>
+      <div>
+        <p class="way-title">Delay</p>
+        <p class="way-desc">Useful for staggering shine on multiple elements.</p>
+        <pre>.shine::after { animation-delay: 0.5s; }</pre>
+      </div>
     </div>
   </div>
 
