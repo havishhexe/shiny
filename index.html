@@ -40,12 +40,15 @@
     }
     .gradient-link {
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       text-decoration: none;
       background: linear-gradient(90deg, #f43f5e, #a855f7, #3b82f6, #10b981);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      word-break: break-all;
+      display: inline-block;
+      max-width: 100%;
     }
 
     hr { border: none; border-top: 1px solid #f0f0f0; margin: 3rem 0; }
@@ -71,10 +74,12 @@
       border-radius: 7px;
       padding: 0.75rem 1rem;
       font-family: monospace;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: #333;
       line-height: 1.65;
       overflow-x: auto;
+      max-width: 100%;
+      word-break: break-word;
     }
     code {
       font-family: monospace;
@@ -167,20 +172,22 @@
     .nav-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.4rem;
       justify-content: center;
       margin-top: 1.6rem;
+      padding: 0 0.5rem;
     }
     .nav-bar a {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       color: #888;
       text-decoration: none;
       border: 1px solid #e8e8e8;
       border-radius: 999px;
-      padding: 4px 12px;
+      padding: 4px 10px;
       transition: color 0.15s, border-color 0.15s;
       overflow: visible;
+      white-space: nowrap;
     }
     .nav-bar a:hover { color: #0a0a0a; border-color: #0a0a0a; }
   </style>
@@ -432,7 +439,7 @@ Rules:
     <p class="section-label">Made by</p>
     <div class="install-card featured">
       <h3 id="bio-name" style="font-size:1.1rem;margin-bottom:0.5rem;">Havish</h3>
-      <p style="margin-bottom:1rem;">I like building things, whether that's code, art, design, or anything creative. If you're into that too, let's connect.</p>
+      <p style="margin-bottom:1rem;">I like building things, whether that's code, design, or anything creative. If you're into that too, let's connect.</p>
       <a href="https://x.com/blurrryytwt" style="font-weight:700;font-size:0.9rem;color:#0a0a0a;text-decoration:none;">x.com/blurrryytwt</a>
     </div>
   </div>
