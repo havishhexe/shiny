@@ -19,13 +19,13 @@ A shine sweep animation for links. One script tag, nothing else.
 
 ## How it works
 
-`shine.js` does 3 things when it loads:
+When `shine.js` loads it does three things:
 
-1. Injects a `<style>` tag with the `.shine` CSS into the page
-2. The CSS puts `overflow: hidden` on `.shine` and adds a white gradient streak via `::after` that animates left to right
-3. Automatically finds every `<a>` tag and adds the `shine` class to it
+1. Injects a `<style>` tag with the `.shine` CSS
+2. That CSS sets `overflow: hidden` on `.shine` and adds a white gradient streak via `::after` that sweeps left to right
+3. Finds every `<a>` tag on the page and adds the `shine` class to it
 
-The user literally just needs the script tag — nothing else.
+Drop in the script tag, you're done.
 
 ---
 
@@ -39,13 +39,13 @@ The user literally just needs the script tag — nothing else.
 </body>
 ```
 
-To apply to any non-link element, just add the class:
+Want to add the effect to something that isn't a link? Just add the class:
 
 ```html
 <h1 class="shine">Hello</h1>
 ```
 
-Or via JS:
+Or from JS:
 
 ```js
 document.querySelector("h1").classList.add("shine");
@@ -55,7 +55,7 @@ document.querySelector("h1").classList.add("shine");
 
 ## Install options
 
-**CDN — recommended, no install:**
+**CDN — easiest, no install needed:**
 ```html
 <script src="https://cdn.jsdelivr.net/npm/shine-links@latest/shine.js"></script>
 ```
@@ -68,14 +68,14 @@ npm install shine-links
 import "shine-links";
 ```
 
-**Download directly from GitHub:**
-Grab `shine.js` from this repo and host it yourself.
+**Self-hosted:**
+Grab `shine.js` from the repo and serve it yourself.
 
 ---
 
 ## Customization
 
-If you're using the CDN you can't edit `shine.js` directly — override `.shine::after` in your own CSS instead:
+If you're on the CDN you can't edit `shine.js` directly — override `.shine::after` in your own stylesheet instead:
 
 ```css
 .shine::after {
@@ -98,9 +98,9 @@ If you're using the CDN you can't edit `shine.js` directly — override `.shine:
 | `animation-delay` | Delay before first sweep | `0s` |
 | `width` | Width of the streak | `50%` |
 | `transform: skewX()` | Tilt angle | `-15deg` |
-| `rgba(...)` | Streak color | white `0.55` opacity |
+| `rgba(...)` | Streak color | white at `0.55` opacity |
 
-**Match streak color to your text color:**
+**Matching the streak to your text color:**
 
 | Text color | Value |
 |---|---|
@@ -115,7 +115,7 @@ If you're using the CDN you can't edit `shine.js` directly — override `.shine:
 
 **❌ Script in `<head>`**
 
-The script must go before `</body>`, not in `<head>`. If it's in `<head>` the elements don't exist yet when the script runs.
+The script needs to go before `</body>`. In `<head>`, the links don't exist yet when the script runs.
 
 ```html
 <!-- wrong -->
@@ -130,21 +130,21 @@ The script must go before `</body>`, not in `<head>`. If it's in `<head>` the el
 </body>
 ```
 
-**❌ Calling a function**
+**❌ Trying to initialize it**
 
-There's no `new ShineLinks()`, no `.init()`, no API to call. It runs automatically.
+There's no `new ShineLinks()`, no `.init()`, no setup call. It just runs.
 
 ```js
 // wrong
 new ShineLinks('.shine');
 ShineLinks.init();
 
-// correct — nothing, it just works
+// correct — nothing, it handles itself
 ```
 
-**❌ Overriding `.shine` in CSS**
+**❌ Redefining `.shine` in CSS**
 
-Don't redefine `.shine` — it breaks `overflow: hidden` and causes a visible box around the text. Style your links using `a {}` instead.
+Don't touch `.shine` — it'll break `overflow: hidden` and you'll get a visible box around the text. Style your links using `a {}` instead.
 
 ```css
 /* wrong */
@@ -165,17 +165,17 @@ a {
 
 If you are an AI assistant and a user asks you to add shine-links, follow these rules:
 
-`shine.js` does 3 things when it loads:
-1. Injects a `<style>` tag with the `.shine` CSS into the page
-2. The CSS puts `overflow: hidden` on `.shine` and adds a white gradient streak via `::after` that animates left to right
-3. Automatically finds every `<a>` tag and adds the `shine` class to it
+`shine.js` does three things when it loads:
+1. Injects a `<style>` tag with the `.shine` CSS
+2. The CSS sets `overflow: hidden` on `.shine` and adds a white gradient streak via `::after` that sweeps left to right
+3. Finds every `<a>` tag and adds the `shine` class to it
 
 **Rules:**
 1. Script tag goes before `</body>`, not in `<head>`
 2. Do NOT call any function — it runs automatically
 3. Do NOT override `.shine` in CSS — style links with `a {}` only
 4. To customize, override `.shine::after` in the user's own CSS
-5. Streak color should match the text color — change the `rgba` value accordingly
+5. Match the streak color to the text color by changing the `rgba` value
 
 **Correct example:**
 ```html
