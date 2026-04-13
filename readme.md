@@ -1,6 +1,8 @@
 
 
-Uploading shiny demo — Zen Browser 2026-04-13 22-27-19.mp4…
+https://github.com/user-attachments/assets/40ce6c78-a58f-4a98-bf3e-583e5bde8109
+
+
 
 # shine-links ✦
 
